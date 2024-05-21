@@ -31,26 +31,29 @@ show()
 
 var v1 = 50;
 function show2 () {
-  var v1 = 40;
-  console.log("Inside show2 v1 : "+v1);
+  var v1 = 40; //not accessible outside the fun
+  console.log("Inside show2 v1 : "+v1); //op-40
 }
 show2();
-console.log("Outside show2 v1 : "+v1);
+console.log("Outside show2 v1 : "+v1);  //op-50
 
+// without function only inside {} or block 
 var v2 = 50;
 {
-  var v2 = 40;
-  console.log("Inside v2 : "+v2);
+  var v2 = 40; // accessible outside the block
+  console.log("Inside v2 : "+v2);  //op-40
 }
-console.log("Outside v2 : "+v2); 
+console.log("Outside v2 : "+v2);  //op-40
 
 //            for let
 let l2 = 50;
 {  // same if it inside a Function
   let l2 = 40;
-  console.log("Inside l2 : "+l2);
+  let L2 = 'out'; 
+  console.log("Inside l2 : "+l2);  //op-40
 }
-console.log("Outside l2 : "+l2);
+console.log("Outside l2 : "+l2);   //op-50
+//console.log("let L2 = "+L2); //L2 is not defined
 
 
 
