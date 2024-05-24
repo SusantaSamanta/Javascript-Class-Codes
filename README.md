@@ -8,4 +8,4 @@
    - Types of operators in js
   
 3. **Class 3**
-   - 
+   - T
