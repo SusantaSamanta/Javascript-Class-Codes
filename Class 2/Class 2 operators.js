@@ -117,10 +117,83 @@ c6 = 4;
 console.log(c5+' !== '+c6+' is : ',c5 !== c6)
 
 // greater than & less than 
-c5 = '4';
+c5 = '5';
 c6 = 4;
 console.log(c5+' > '+c6+' is : ',c5 > c6)
 console.log(c5+' < '+c6+' is : ',c5 < c6)
+
+// greater than & less than equal to 
+c5 = '6';
+c6 = 6;
+console.log(c5+' >= '+c6+' is : ',c5 >= c6)
+console.log(c5+' <= '+c6+' is : ',c5 <= c6)
+
+
+
+// 3. string operator
+
+// string competition 
+console.log('a'>'b');
+console.log('b'<'c');
+// ascii value a=97,b=98...
+
+
+// string concatenation 
+
+let s1 = "Susanta";
+let s2 = "Samanta";
+//let s3 = s1+s2;
+let s3 = s1+" "+s2;
+console.log('My name is '+ s3);
+
+s3 = "Hello"
+s3 += " World"
+console.log(s3);
+
+
+
+// 5. logical operator 
+
+// logical AND &&
+console.log('true && true is : ', true && true);
+console.log('true && false is : ', true && false);
+console.log('false && true is : ', false && true);
+console.log('false && false is : ', false && false);
+
+if( 4 < 44 && 44 < 444 ) {
+  console.log('In logical AND if all condition is true then result is true.')
+}
+
+// logical OR ||
+console.log('true || true is : ', true || true);
+console.log('true || false is : ', true || false);
+console.log('false || true is : ', false || true);
+console.log('false || false is : ', false || false);
+
+if( 4 < 44 || 44 > 444 ) {
+  console.log('In logical OR if only one condition is true then result is true.')
+}
+
+//logical NOT !
+console.log('!true is ', !true);
+console.log('!false is ', !false);
+
+if(!false){
+console.log("If !false then the result is change to true vise versa.");
+}
+
+
+
+
+
+
+// bitwise operator
+
+
+
+
+
+
 
 
 
