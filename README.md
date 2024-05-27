@@ -8,4 +8,8 @@
    - Types of operators in js
   
 3. **Class 3**
-   - T
+   - Function in js
+     - Single parameter
+     - Default parameter 
+     - Multiple parameters
+     - function overriding 
