@@ -43,3 +43,14 @@ add2(5,7) // always call last updated function
 // add2(5,7,d=undefined) so 5+7+undefined=NaN
 add2(6,8,3) //always call last updated function
 // add2(6,8,3) => 17
+                 // an other example 
+function add3(a,b){
+  c = a + b;
+  console.log("Sum of "+a+" and "+b+" is : ",c)
+}
+function add3(a,b,c,d){
+  e = a + b +c +d;
+  console.log("Sum of "+a+" , "+b+" , " +c+" and "+d+" is : ",e)
+}
+add3(23,6,8,3);
+add3(3,8)
