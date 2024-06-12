@@ -12,4 +12,8 @@
      - Single parameter
      - Default parameter 
      - Multiple parameters
-     - function overriding 
+     - Function overriding
+     - Anynomous function
+     - Arrow function
+     - Immediately invoked function
+     - Set time out function 
