@@ -15,5 +15,7 @@
      - Function overriding
      - Anynomous function
      - Arrow function
+       - Arrange sentence by upper & lower case.js
      - Immediately invoked function
      - Set time out function 
+
