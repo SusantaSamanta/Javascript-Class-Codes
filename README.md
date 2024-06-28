@@ -12,9 +12,10 @@
      - Single parameter
      - Default parameter 
      - Multiple parameters
-     - function overriding
+     - Function overriding
      - Anynomous function
      - Arrow function
-       - Arrange sentence words by upper & lower case
+       - Arrange sentence by upper & lower case.js
      - Immediately invoked function
-     - Set time out function
+     - Set time out function 
+
