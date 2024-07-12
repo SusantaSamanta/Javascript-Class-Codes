@@ -160,3 +160,30 @@ const fastupper2 = (str) => {
 }
 fastupper2('hElLo <sUSAnta <sAmAnta. weLcome tO our weBsiTe. thankS for visiting ouR WebSite.wE always Help yoU.')
 console.log(copystr2)
+
+
+
+// higher order function 
+
+
+const upper = function (s){
+  return s.toUpperCase()
+}
+const lower = function (s){
+  return s.toLowerCase()
+}
+const converter = function ( s, fun){
+   return fun(s)   //  s contain string as args and fun contain function name as args like 》lower("susa")
+}
+let inputStr = "sUsaNtA SamaNTa"
+inputStr = "sUsaNtA SamaNTa"
+console.log(converter(inputStr,upper))
+console.log(converter(inputStr,lower))
+
+
+
+
+
+
+
+
