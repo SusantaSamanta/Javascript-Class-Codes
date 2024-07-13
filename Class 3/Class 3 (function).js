@@ -30,7 +30,12 @@ function add(a,b){
 }
 add(30,7);
 
+
+
 //function overriding 
+
+
+
 function add2(a,b){
   let c=a+b;
   console.log("Sum of "+a+" and "+b+" is : ",c)
@@ -61,6 +66,7 @@ add3(3,8)
 //anynomous function 
 
 
+
 let add4 = function(a,b){
   c = a + b;
   console.log("Sum of "+a+" and "+b+" is : ",c);
@@ -77,7 +83,9 @@ add5(8,8);
 // for this reason we use const variable.
 
 
+
 // arrow function 
+
 
 
 const show3 = (name) => name
@@ -166,20 +174,82 @@ console.log(copystr2)
 // higher order function 
 
 
-const upper = function (s){
+
+const upper = function (s){   //anynomous
   return s.toUpperCase()
 }
-const lower = function (s){
-  return s.toLowerCase()
-}
+const lower = (s) => s.toLowerCase() //arr
+
 const converter = function ( s, fun){
    return fun(s)   //  s contain string as args and fun contain function name as args like 》lower("susa")
 }
 let inputStr = "sUsaNtA SamaNTa"
 inputStr = "sUsaNtA SamaNTa"
-console.log(converter(inputStr,upper))
-console.log(converter(inputStr,lower))
+console.log(converter(inputStr, upper));
+console.log(converter(inputStr, lower));
 
+
+
+// immediately invoked function IIFE
+
+
+
+// before any IIFE ";" is mast (not in function)
+(function(){
+  console.log("IIFE")
+})();  // before any IIFE ";" is mast
+(function(a){
+  console.log("Susanta "+a);
+})("Samanta")
+
+
+
+
+//    setTimeout function 
+
+
+
+const Time = () => console.log("Hello")
+setTimeout(Time,2000)
+setTimeout(Time,2500)
+setTimeout(Time,3000)
+
+const Time1 = (a,b) => console.log(a+b)
+setTimeout(() => Time1(3,8),3500) // to send arguments we have to follow this rules 
+
+setTimeout(() => {
+console.log("After 4 second")
+},4000)
+
+
+
+//      setInterval function 
+
+
+
+const Time3= () => console.log("after 5s")
+setInterval(Time3,5000) // continuously call after 5 second.
+setInterval( () => {
+  console.log("after 5.5s")
+},5500)
+
+
+
+//      Function hosting 
+
+
+
+//show6() // this make error because no function in js function doesn't call before initialisation except normal function 
+const show6 = () => {
+  console.log("Show6 function call")
+}
+show6() // we can call function after initialisation
+  
+show7()  // this can't make error because this is normal function 
+function show7() {
+  console.log("Show7 function call")
+}
+  
 
 
 
