@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Game</title>
+</head>
+<body>
+  <div id="toDoContainer">
+    <h1>To Do List</h1>
+    <input type="text" id="inputTxt" placeholder="add something"/>
+    <button id="btn">Click for add</button>
+    <ol id="toDoList"></ol>
+  </div>
+  
+  
+  
+<script>
+  
+  
+  let inp = document.getElementById('inputTxt');
+  let bt = document.querySelector('#btn');
+  let toDoList = document.getElementById('toDoList');
+  
+ 
+const actionFun = () =>{
+  
+  if(inp.value != ''){
+    let newToDo = document.createElement("li");
+    newToDo.innerText = inp.value;
+    console.log(newToDo.innerText);
+    toDoList.appendChild(newToDo);
+    //console.log(toDoContainer.innerHTML);
+    inp.value = '';
+  }
+  else
+    console.log('block');
+    
+    
+}
+  bt.addEventListener("click", () => {
+    actionFun();
+  })
+  toDoList.addEventListener('click', (event) => {
+    setTimeout(()=>{
+      let currentEle = event.target;
+      currentEle.remove();
+      console.log(event.target.innerHTML)
+    },100)
+  })
+  
+  
+  
+  
+</script>
+ 
+</body>
+</html>

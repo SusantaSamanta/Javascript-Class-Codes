@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Game</title>
+</head>
+<body>
+  <div id="a">
+    A
+    <ul>
+      <li>a</li>
+      <li>b</li> <!-- hello this is comment-->
+      <li>c</li>
+      <li style="display:none">d</li>
+      <li>e</li>
+    </ul>
+  </div>
+  
+  
+  
+<script>
+  
+  
+  
+  let myLi = document.querySelector('#a'); //# required for id and so on
+  console.log(myLi.innerText)  
+  
+  myLi = document.querySelector('div'); // for tag #,. not  required 
+  console.log(myLi.innerText)  
+  
+  myLi = document.querySelector('li');
+  console.log(myLi.innerText)  
+  //console.log(myLi[1].innerText)  // error 
+  
+  myLi = document.querySelector('li');
+  console.log(myLi)  //give first li
+  
+  myLi = document.querySelectorAll('li');
+  console.log(myLi)  // node list of all li
+  
+  //console.log(myLi.length)  // node list 
+  
+  
+  myLi = document.querySelectorAll('li');
+  console.log(myLi[0].innerText) 
+  for(let i of myLi){
+    console.log(i.innerText)
+  }
+  
+  
+  
+  
+  
+</script>
+ 
+</body>
+</html>

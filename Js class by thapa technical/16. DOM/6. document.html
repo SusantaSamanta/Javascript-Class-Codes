@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Game</title>
+</head>
+<body>
+  <h1>Susanta</h1>
+  <p>My name is Susanta <spen style="color:red">Samanta</spen></p>
+<script>
+  
+  
+  console.log(document.body);
+  console.log(document.head);
+  
+  console.log(document.body.childNodes);
+  console.log(document.body.children);
+  
+  
+  console.log(document.body.firstElementChild); // h1 tag
+  console.log(document.body.firstChild); 
+        /* <body>{}-----> this text is firstChild
+              <h1> ---> this is first Element child 
+              */ 
+  
+  
+  
+  
+  console.log(document.body.lastElementChild); // h1 tag
+  console.log(document.body.lastChild); 
+        /* <body>{}-----> this text is lastChild
+              <h1> ---> this is last Element child 
+              */ 
+              
+              
+  console.log(document.body.firstChild.nextSibling)
+  /*body.firstChild  mean
+  <body>{text} ---> first child
+    <h1> ---> next nextSibling
+ 
+  */
+  console.log(document.body.firstElementChild.nextSibling)
+  /*body.firstElementChild  mean
+  <body>
+    <h1> ---> first Element
+      {} ---> nextSibling
+      <p> ---> next Elemet Sibling
+  */
+  console.log(document.body.firstElementChild.nextElementSibling)
+
+
+
+  console.log(document.body.firstElementChild.nextElementSibling.parentElement)
+  
+  /*
+  <body> ---> parentElement
+    <h1> -----> firstElementChi nextEleSib is <p>
+      <p> -----> parentElement is body (boby is also parent of <h1>)
+  
+  */
+  
+  
+  
+  
+</script>
+ 
+</body>
+</html>

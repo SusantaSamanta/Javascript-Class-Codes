@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Game</title>
+</head>
+<body>
+  <div id="a">
+    A
+    <ul>
+      <li>a</li>
+      <li>b</li> <!-- hello this is comment-->
+      <li>c</li>
+      <li style="display:none">d</li>
+      <li>e</li>
+    </ul>
+  </div>
+  
+  
+  
+<script>
+  
+  
+  
+  let myLi = document.getElementsByTagName("li");
+  console.log(myLi[0].innerText) 
+  console.log(myLi[1].innerText) 
+  console.log(myLi[4].innerText) 
+  
+  let allLi = document.getElementsByTagName('li')
+ Array.from(allLi).forEach((ele, index) =>{
+    console.log(`li [${index}] =${ele.innerText}`)
+  }) /// it can be written as 
+  let index = 0
+ for(i of allLi){
+    console.log(`li [${index}] =${i.innerText}`)
+    index++
+  }   /// by this two way we can get display none tag innerText which is normally not possible.
+  
+  
+  
+  
+  
+</script>
+ 
+</body>
+</html>

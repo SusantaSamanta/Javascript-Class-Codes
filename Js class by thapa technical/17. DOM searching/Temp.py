@@ -1,0 +1,1 @@
+print("Ente two number: ")

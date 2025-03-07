@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Closest Example</title>
+  <style>
+    .container {
+      border: 2px solid blue;
+      padding: 20px;
+    }
+    .parent {
+      border: 2px dashed green;
+      padding: 20px;
+    }
+    .child {
+      border: 2px dotted red;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="parent">
+      <div class="child" id="myChild">
+        Click me!
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('myChild').addEventListener('click', function () {
+      // Find the closest ancestor with the class "parent"
+      const closestParent = this.closest('.parent');
+      console.log(closestParent); // Logs the parent element
+      closestParent.style.backgroundColor = 'lightgreen'; // Highlight the parent
+    });
+  </script>
+</body>
+</html>
