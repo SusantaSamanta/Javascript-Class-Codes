@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #outer {
+            height: 400px;
+            width: 500px;
+            border: 0px solid red;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-shadow: 0px 0px 15px 8px rgb(202, 202, 202);
+        }
+
+        #outerP {
+            color: red;
+            left: 20px;
+            top: 0px;
+            position: absolute;
+        }
+
+        #middle {
+            height: 260px;
+            width: 400px;
+            border: 0px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-shadow: 0px 0px 15px 5px rgb(202, 202, 202);
+        }
+
+        #middleP {
+            color: red;
+            left: 20px;
+            top: 0px;
+            position: absolute;
+        }
+
+        #center {
+            height: 120px;
+            width: 300px;
+            border: 0px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-shadow: 0px 0px 15px 5px rgb(202, 202, 202);
+        }
+
+        #centerP {
+            color: red;
+            left: 20px;
+            top: 1px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <p id="outerP">Outre</p>
+        <div id="middle">
+            <p id="middleP">Middle</p>
+            <div id="center">
+                <p id="centerP">Center</p>
+            </div>
+        </div>
+    </div>
+    <script>
+
+
+        // because of the event propagation if we click on center div the outer, middle *(if three element are in click listener property) will also clicked because of the bubbling face 
+        // bubbling face will work from bottom to top
+
+
+        const outerFun = () =>
+            console.log("Outer click");
+        const middleFun = () =>
+            console.log("Middle click");
+        const centerFun = () =>
+            console.log("Center click");
+
+
+
+        //to over come this issue we use event.stopPropagation() property
+/*
+        const outerFun = () =>  {
+            console.log("Outer click");
+        }
+        const middleFun = () =>{
+            console.log("Middle click");                    
+            event.stopPropagation();  // it block to call 'outer' click
+        }
+        const centerFun = () =>{
+            console.log("Center click");                
+            event.stopPropagation();  // it block to 'middle' and 'outre' call click
+        }
+                   
+*/
+
+
+
+
+        document.getElementById("outer").addEventListener('click', outerFun);
+        document.getElementById("middle").addEventListener('click', middleFun);
+        document.getElementById("center").addEventListener('click', centerFun);
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Game</title>
+  <style>
+    *{
+      user-select: none;
+    }
+  </style>  
+</head>
+<body>
+  <div>
+    <h1>addEventListener Event Handler : </h1>
+    <ol>
+      <li>
+        <p>onclick</p>
+        <button id="onCl">click</button>
+      </li>
+      <li>
+        <p>On Double Click : dblclick</p>
+        <button id="ondblCl">Double Click</button>
+      </li>
+      
+      <li>
+        <p>On Mouse Over : mouseover</p>
+        <button id="onmou">Only over mouse</button>
+      </li>
+    </ol>
+    
+  </div>
+  
+  
+  
+<script>
+  
+  document.getElementById('onCl').addEventListener('click', () => {
+    alert("hello");
+  });
+  document.getElementById('ondblCl').addEventListener('dblclick', () => {
+    alert("hello");
+  });
+  document.getElementById('onmou').addEventListener('mouseover', () => {
+    alert("hello");
+  });
+  
+  
+  
+  
+</script>
+ 
+</body>
+</html>

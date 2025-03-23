@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Game</title>
+  <style>
+    *{
+      user-select: none;
+    }
+    body{
+      padding-left: 50px;
+    }
+    #inPut{
+      width: 150px;
+    }
+    
+  </style>  
+</head>
+<body>
+  <h1>Input Events : </h1>
+  <div>
+    <input id="inPut" name="My Input" placeholder="Type somthing......"/>
+    <p id="inpValue">Input Value : </p>
+    <p id="inpName">Input Name : </p>
+    <p id="inpType">Input Type : </p>
+    <p id="eventType">Event Type : </p>
+  </div>
+  
+  
+  
+<script>
+  
+  
+  const keyDownEventFun = (ev) =>{
+    console.log(ev.key)
+    inpValue.innerText = `Input Value : ${ev.target.value}`;
+    inpName.innerText =`Input Name: ${ev.target.name}`;
+    inpType.innerText = `Input Type : ${ev.inputType}`;
+    eventType.innerText = `Event Type : ${ev.type}`;  
+  }
+  
+  
+  document.getElementById('inPut').addEventListener('input', keyDownEventFun);
+  
+  document.getElementById('inPut').addEventListener('change', keyDownEventFun);
+ 
+  
+  
+</script>
+ 
+</body>
+</html>

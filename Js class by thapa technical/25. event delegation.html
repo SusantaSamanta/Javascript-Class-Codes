@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        #container {
+            height: 90vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #nameList {
+            list-style: none;
+        }
+        #clickMassage{
+            margin-block: 30px;
+            width: 280px;
+            text-align: center;
+            color: #6180ff;
+        }
+        #nameList li {
+            height: 30px;
+            width: 200px;
+            border: 2px solid #160285;
+            background: #6180ff;
+            border-radius: 20px;
+            margin-block: 15px;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #showMassage{
+            height: 40px;
+            width: 400px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 2px;
+            font-size: 25px;
+            color: #2e58ff;
+            border: 0px solid red;
+            text-shadow: 1px 1px 2px #2495ff;
+            transition: all .3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <hi>Example of event delegation</hi>
+    <section id="container">
+
+        
+        <h2 id="showMassage"></h2>
+        <h2 id="clickMassage">Click any of the list</h2>
+        <ul id="nameList">
+            <li>Susanta Samanta</li>
+            <li>Suman Samanta</li>
+            <li>Sumana Samanta</li>
+            <li>Sayan Samanta</li>
+            <li>Sanju Samanta</li>
+            <li>Sudip Samanta</li>
+        </ul>
+    </section>
+
+    <script>
+
+        //  by the fo the concept of event delegation : instead of giving id to each <li> 
+        //      we will give the click event to the parent <ul> , and by the help of event.
+        //      target we can access each child <li> like this :> 
+
+        let setTimeId = -1;
+        const nameShowFun = (event) =>{
+            clearTimeout(setTimeId);
+            document.getElementById("showMassage").innerText = `Welcome ${event.target.innerText}`;
+            setTimeId = setTimeout(() =>{
+                document.getElementById("showMassage").innerText = "";
+            },10000);
+        }
+
+
+        document.getElementById("nameList").addEventListener('click', nameShowFun)
+
+    </script>
+</body>
+
+</html>

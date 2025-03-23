@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            min-height: 100vh;
+            padding-block: 50px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .todoContainer {
+            min-height: 400px;
+            width: 400px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .todo-header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 20px;
+            /* border: 1px solid red; */
+        }
+
+        .todo-header h1 {
+            font-size: 1.5rem;
+            color: #2c3e50;
+        }
+
+        .todo-header span {
+            margin-left: 10px;
+            margin-bottom: 3px;
+            font-size: 1.2rem;
+        }
+
+        .addTask {
+            display: flex;
+            /* border: 1px solid red; */
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        #addTaskInput {
+            width: 85%;
+            padding: 10px;
+            padding-right: 55px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 25px 0 0 25px;
+            outline: none;
+        }
+
+        .addTask button {
+            position: absolute;
+            right: 0px;
+            padding: 11px 30px;
+            font-size: 1rem;
+            border: none;
+            background: #f75c3c;
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #addTaskButton:hover {
+            background-color: #e2442e;
+        }
+
+        #listContainer {
+            padding-left: 20px;
+            /* border: 1px solid red; */
+        }
+
+        .taskList {
+            margin-top: 10px;
+            /* list-style-type: decimal; */
+            font-size: 16px;
+            /* border: 1px solid; */
+            font-family: Arial, sans-serif;
+        }
+
+        .taskText {
+            width: 100%;
+            /* border: 1px solid red; */
+            display: flex;
+            padding-right: 10px;
+            justify-content: space-between;
+        }
+
+        .taskItem {
+            margin-top: 20px;
+        }
+
+        .deleteTask {
+            cursor: pointer;
+        }
+
+        .taskDescription {
+            scrollbar-width: none;
+           
+            overflow-x: scroll;
+            position: relative;
+            bottom: 3px;
+            width: 90%;
+            /* border: 1px solid; */
+        }
+
+        li::marker {
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="todoContainer">
+        <div class="todo-header">
+            <h1>To-Do List</h1>
+            <span>📝</span>
+        </div>
+        <div class="addTask">
+            <input id="addTaskInput" type="text" placeholder="Add your task" />
+            <button id="addTaskButton">ADD</button>
+        </div>
+        <div id="listContainer">
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

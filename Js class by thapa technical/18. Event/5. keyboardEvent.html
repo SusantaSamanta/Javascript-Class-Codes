@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Game</title>
+  <style>
+    *{
+      user-select: none;
+    }
+    body{
+      padding-left: 50px;
+    }
+    #inPut{
+      width: 100px;
+    }
+    
+  </style>  
+</head>
+<body>
+  <h1>Keyboard Events : </h1>
+  <div>
+    <input id="inPut" placeholder="Type somthing......"/>
+    <p id="keyPress">Key Press : </p>
+    <p id="keyCode">Key Code : </p>
+    <p id="charCode">Char Code : </p>
+    <p id="eventType">Event Type : </p>
+  </div>
+  
+  
+  
+<script>
+  
+  let keyPress = document.getElementById('keyPress');
+  let keyCode = document.getElementById('keyCode');
+  
+  const keyDownEventFun = (ev) =>{
+    console.log(ev.key)
+    keyPress.innerText = `Key Press : ${ev.key}`;
+    keyCode.innerText =`Key Code: ${ev.keyCode}`;
+    charCode.innerText = `Char Code : ${ev.key.charCodeAt(0)}`;
+    eventType.innerText = `Event Type : ${ev.type}`;  
+  }
+  
+  
+  document.getElementById('inPut').addEventListener('keydown', keyDownEventFun);
+  //document.getElementById('inPut').addEventListener('keyup', keyDownEventFun);
+  
+  
+  
+  
+  
+</script>
+ 
+</body>
+</html>

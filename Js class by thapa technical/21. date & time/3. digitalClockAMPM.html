@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .clock {
+            font-size: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock" id="clock"></div>
+
+    <script>
+
+        const clockFun = () => {
+            let myData = new Date();
+            let hour = myData.getHours();
+            let minute = myData.getMinutes();
+            let seconds = myData.getSeconds();
+            let clock = document.getElementById("clock");
+
+            minute = String(minute).padStart(2, "0");   // copy 😁
+            seconds = String(seconds).padStart(2, "0");
+
+            if (hour <= 11 && minute <= 59 && seconds <= 59)
+                clock.innerText = `${hour}:${minute}:${seconds} AM`;
+            else
+                clock.innerText = `${hour - 12}:${minute}:${seconds} PM`;
+
+            setTimeout(clockFun, 1000);
+        }
+
+
+        clockFun();
+
+    </script>
+</body>
+
+</html>

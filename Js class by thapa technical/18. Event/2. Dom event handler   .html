@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Game</title>
+  <style>
+    *{
+      user-select: none;
+    }
+    .color{
+      color: red;
+    }
+    
+  </style>  
+</head>
+<body>
+  <div>
+    <h1>Dom Event Handler : </h1>
+    <ol>
+      <li>
+        <p>onclick</p>
+        <button id="onCl">Click</button>
+      </li>
+      <li>
+        <p>On Double Click : ondblclick</p>
+        <button id="ondblCl">Double Click</button>
+      </li>
+      
+      <li>
+        <p>On Mouse Over : onmouseover</p>
+        <button id="onmou">Only over mouse</button>
+      </li>
+    </ol>
+    
+  </div>
+  
+  
+  
+<script>
+  
+  document.getElementById('onCl').onclick = () =>{
+    alert("hello");
+    onCl.classList.add("color");
+  }
+  document.getElementById('ondblCl').ondblclick = () =>{
+    alert("hello")
+    ondblCl.classList.add("color");
+  }
+  document.getElementById('onmou').onmouseover = () =>{
+    alert("hello")
+    onmou.classList.add("color");
+  }
+  
+  
+  
+</script>
+ 
+</body>
+</html>
